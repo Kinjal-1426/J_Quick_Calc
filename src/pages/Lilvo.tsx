@@ -118,7 +118,7 @@ const Lilvo : React.FC = () => {
                 size="small"
               />
               <TextField
-                label="% of Value"
+                label="Vatav"
                 type="number"
                 value={percentage}
                 onChange={(e) => setPercentage(Number(e.target.value))}
@@ -147,7 +147,7 @@ const Lilvo : React.FC = () => {
               Calculated Payment: {payment.toFixed()}
             </Typography>
             <TextField
-              label="Vatav"
+              label="Dhagla Chhut"
               type="number"
               value={vatav}
               size="small"

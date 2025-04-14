@@ -38,9 +38,9 @@ const Lal : React.FC = () => {
     const totalWeight = () => {
       const F = fol;
       if (!F) return;
-      const K = parseInt(Math.min((F * 2) / 14, khakhri || 0).toFixed());
-      const D = parseInt(Math.min((F * 3) / 14, dakhri || 0).toFixed());
-      const J = parseInt(Math.min(F / 14, jeran || 0).toFixed());
+      const K = parseInt(Math.min(Math.floor((F * 2) / 14), khakhri || 0).toFixed());
+      const D = parseInt(Math.min(Math.floor((F * 3) / 14), dakhri || 0).toFixed());
+      const J = parseInt(Math.min(Math.floor(F / 14), jeran || 0).toFixed());
       const total = F + khakhri + dakhri + jeran;
       const calculatedWeight = F + K + D + J;
       setNewKhakhri(K);
@@ -188,7 +188,7 @@ const Lal : React.FC = () => {
                 size="small"
               />
               <TextField
-                label="% of Value"
+                label="Vatav"
                 type="number"
                 value={percentage}
                 onChange={(e) => setPercentage(Number(e.target.value))}
